@@ -104,10 +104,9 @@ class MainActivity : AppCompatActivity() {
             val numRandom = Random.nextInt(textos.size)
             val nRandom = Random.nextInt(1, 3)
 
-            if (nRandom == 1) {
-                textoA.text = textos[numRandom]
-            } else if (nRandom == 2) {
-                textoB.text = textos[numRandom]
+            when (nRandom) {
+                1 -> textoA.text = textos[numRandom]
+                2 -> textoB.text = textos[numRandom]
             }
         }
     }
