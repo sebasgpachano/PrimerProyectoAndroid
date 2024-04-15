@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -96,6 +97,18 @@ class MainActivity : AppCompatActivity() {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
                     "Ipsum dolor sit amet consectetur adipiscing. " +
                     "Sed risus pretium quam vulputate dignissim. " +
-                    "Enim praesent elementum facilisis leo.")
+                    "Enim praesent elementum facilisis leo."
+        )
+
+        boton.setOnClickListener() {
+            val numRandom = Random.nextInt(textos.size)
+            val nRandom = Random.nextInt(1, 3)
+
+            if (nRandom == 1) {
+                textoA.text = textos[numRandom]
+            } else if (nRandom == 2) {
+                textoB.text = textos[numRandom]
+            }
+        }
     }
 }
