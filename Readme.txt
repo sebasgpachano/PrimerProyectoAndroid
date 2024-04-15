@@ -1,0 +1,1 @@
+Pequeña aplicación que cambia los textos aleatoriamente pulsando el botón
